@@ -2,6 +2,37 @@
 
   Abstract migration framework for node
 
+**NOTE: This is a fork of [node-migrate](https://github.com/tj/node-migrate)**.
+I made this mainly because I wanted to add [ES2015 modules](https://babeljs.io/learn-es2015/#ecmascript-2015-features-modules)
+(`import/export`) and also the experimental ES2017 `async/await`. So it uses
+[babel-register](http://babeljs.io/docs/usage/babel-register/) alongside
+[babel-preset-env](https://github.com/babel/babel-preset-env) with the target
+`node: 'current'`.
+
+**This is totally experimental** and should not be backward compatible with the
+previous way of writing migrations. Now you should write it like:
+
+```js
+import db from './dbconnection';
+
+export async function up() {
+
+  const collection = await db.collection('users');
+  const result = await collection.insert({
+    email: 'demo@demo.com',
+    pass: 12345
+  });
+
+  // no need to call next().
+}
+
+export async function down() {
+  // do the opposite
+}
+```
+
+However the `cli` should **work as expected**.
+
 ## Installation
 
     $ npm install migrate

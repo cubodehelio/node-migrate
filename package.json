@@ -1,17 +1,20 @@
 {
   "name": "migrate",
-  "version": "0.2.3",
+  "version": "0.3.0-alpha.1",
   "description": "Abstract migration framework for node",
   "keywords": [
     "migrate",
     "migrations"
   ],
   "author": "TJ Holowaychuk <tj@vision-media.ca>",
-  "repository": "git://github.com/visionmedia/node-migrate",
+  "repository": "git://github.com/cubodehelio/node-migrate",
   "bin": {
     "migrate": "./bin/migrate"
   },
   "devDependencies": {
+    "eslint": "^3.15.0",
+    "eslint-plugin-async-await": "0.0.0",
+    "eslint-plugin-import": "^2.2.0",
     "mocha": "^2.2.1"
   },
   "main": "index",
@@ -23,6 +26,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "babel-register": "^6.23.0",
     "dateformat": "^1.0.12"
   }
 }
