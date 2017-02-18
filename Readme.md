@@ -33,6 +33,13 @@ export async function down() {
 
 However the `cli` should **work as expected**.
 
+**Install**: It is not available on `npm` yet: However you can install it via
+npm like follows:
+
+```bash
+npm install git+https://github.com/cubodehelio/node-migrate.git#0.3.0-alpha.1 --save
+```
+
 ## Installation
 
     $ npm install migrate

@@ -1,6 +1,7 @@
 0.3.0-alpha.1 / 2017-02-18
 ==================
 
+  * Add installation docs.
   * Add a wrapper fn over `up/down` to support promises.
   * Update migration template to use `async/await`
   * Add `babel-register` support with `babel-preset-env`
