@@ -54,14 +54,13 @@ var usage = [
  */
 
 var template = [
-  , ''
   , 'export async function up() {'
   , ''
-  , '};'
+  , '}'
   , ''
   , 'export async function down() {'
   , ''
-  , '};'
+  , '}'
   , ''
 ].join('\n');
 
